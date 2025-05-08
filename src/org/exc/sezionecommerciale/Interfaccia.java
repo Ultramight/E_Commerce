@@ -197,7 +197,7 @@ public class Interfaccia extends JFrame {
         statusLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
         
         logoutButton = new JButton("Logout");
-        logoutButton.setEnabled(false);
+        logoutButton.setEnabled(true);
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -286,10 +286,24 @@ public class Interfaccia extends JFrame {
         logoutButton.setEnabled(false);
         
         // Torna alla schermata di login
+     // Rimuovi tutto dal mainPanel
         mainPanel.removeAll();
+
+        // Aggiungi il pannello di login al centro
         mainPanel.add(loginPanel, BorderLayout.CENTER);
+
+        // Crea un pannello per lo status e aggiungi il statusLabel e il logoutButton
+        JPanel statusPanel = new JPanel(new BorderLayout());
+        statusPanel.add(statusLabel, BorderLayout.WEST);
+        statusPanel.add(logoutButton, BorderLayout.EAST);
+
+        // Aggiungi lo statusPanel al sud
+        mainPanel.add(statusPanel, BorderLayout.SOUTH);
+
+        // Rendi visibile la schermata aggiornata
         mainPanel.revalidate();
         mainPanel.repaint();
+       
         
         // Resetta il campo email
         emailField.setText("");
@@ -337,7 +351,7 @@ public class Interfaccia extends JFrame {
                 lineCount++;
                 
                 // Ignora le righe di intestazione
-                if (lineCount <= 3 || line.trim().isEmpty()) {
+                if (line.trim().isEmpty() || line.startsWith("Carrello") || line.startsWith("-") || line.startsWith("Email;")) {
                     continue;
                 }
                 
@@ -382,6 +396,7 @@ public class Interfaccia extends JFrame {
     
     private void updateUserInfoPanel() {
         userInfoPanel.removeAll();
+        
         
         JLabel nameLabel = new JLabel("Nome: " + loggedUserName + " " + loggedUserSurname);
         JLabel emailLabel = new JLabel("Email: " + loggedUserEmail);
