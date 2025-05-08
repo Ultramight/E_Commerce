@@ -1,0 +1,4 @@
+Utente;Nome;Cognome;Email;Indirizzo
+Utente 1;Mario;Rossi;mario.rossi@example.com;Via Roma 1
+Utente 2;Laura;Bianchi;laura.bianchi@example.com;Via Lazio 3
+Utente 3;Luca;Verdi;luca.verdi@example.com;Via Pisa 109

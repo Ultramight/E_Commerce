@@ -1,0 +1,5 @@
+Prodotto;Tipo;Prezzo;Marca
+Prodotto 1;Jeans;29.99;Carrera
+Prodotto 2;Jeans;39.99;Levis
+Prodotto 3;Pantaloncino;9.99;Diesel
+Prodotto 4;Pantaloncino;13.99;Levis

@@ -1,0 +1,10 @@
+Carrello utenti:
+
+Email;Tipo;Marca;Prezzo
+laura.bianchi@example.com;Jeans;Levis;39.99
+laura.bianchi@example.com;Pantaloncino;Diesel;9.99
+luca.verdi@example.com;Pantaloncino;Diesel;9.99
+mario.rossi@example.com;Jeans;Carrera;29.99
+mario.rossi@example.com;Pantaloncino;Levis;13.99
+mario.rossi@example.com;Jeans;Carrera;29.99
+mario.rossi@example.com;Pantaloncino;Diesel;9.99
